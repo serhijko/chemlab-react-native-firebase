@@ -9,12 +9,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const PasswordForgetScreen = () => {
+const Account = () => {
   return (
     <View style={styles.container}>
-      <Text>Protected Password Forget Screen</Text>
+      <Text>Protected Account Screen</Text>
     </View>
   );
 };
 
-export default PasswordForgetScreen;
+export default Account;

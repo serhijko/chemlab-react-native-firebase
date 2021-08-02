@@ -9,12 +9,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const PasswordForgetScreen = () => {
+const AdminScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Protected Password Forget Screen</Text>
+      <Text>Protected Admin Screen</Text>
     </View>
   );
 };
 
-export default PasswordForgetScreen;
+export default AdminScreen;
