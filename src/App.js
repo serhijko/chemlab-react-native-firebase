@@ -6,6 +6,7 @@ import {
 } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import Firebase, { FirebaseContext } from './Firebase';
 import { Button } from 'react-native';
 
@@ -15,15 +16,27 @@ import SignUpScreen from './screens/SignUp';
 import PasswordForgetScreen from './screens/PasswordForget';
 import PasswordChangeScreen from './screens/PasswordChange';
 import HomeScreen from './screens/Home';
+import ProfileScreen from './screens/Profile';
 import AccountScreen from './screens/Account';
 import AdminScreen from './screens/Admin';
+
+const Tab = createBottomTabNavigator();
+
+const HomeTabs = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name = "Home" component={HomeScreen} />
+      <Tab.Screen name = "Profile" component={ProfileScreen} />
+    </Tab.Navigator>
+  );
+};
 
 const Drawer = createDrawerNavigator();
 
 const HomeDrawer = () => {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="Home" component={HomeTabs} />
       <Drawer.Screen name="Account" component={AccountScreen} />
       <Drawer.Screen
         name="Password Forget"
